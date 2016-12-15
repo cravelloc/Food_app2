@@ -1,0 +1,37 @@
+<body class="page">
+
+
+<div class='logo2'> <%= image_tag("logo_red.png", alt: 'gourmate_logo') %> </div>
+<div class='recipes'>
+<% if @steakrecipes.get['results'].length>0%>
+
+<div class="row">
+<% @steakrecipes.get['results'].each do |recipe| %>
+
+  <!-- <h1><%= recipe['title'] %></h1> -->
+  <div class="results">
+    <h3><%= link_to recipe['title'], recipe['href'] %></h3>
+    <p><%=recipe['ingredients']%></p>
+    <% if recipe['thumbnail'].empty? %>
+      <%= image_tag("recipe.png", alt: "recipe")%>
+    <%else%>
+      <img src="<%=recipe['thumbnail']%>"/>
+    <%end%>
+  </div>
+<% end %>
+</div>
+  <h3><%= button_to 'New Search', root_path,class: "btn btn-default", method: :get %></h3>
+<% else %>
+
+<h1>No Results Found</h1>
+<%= form_tag("/search", method: "get") do %>
+  <%= label_tag(:q, "Search for:") %>
+  <%= text_field_tag(:q) %>
+  <%= label_tag(:y, "Search for ingredients separated by commas:") %>
+  <%= text_field_tag(:y) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
+<%end%>
+</div>
+</body>

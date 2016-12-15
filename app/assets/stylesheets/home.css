@@ -1,0 +1,66 @@
+* {
+
+  font-family: 'Open Sans', sans-serif;
+  align-content: center;
+}
+
+body{
+  background-image: url("background.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover ;
+  vertical-align: middle;
+}
+
+
+.main2{
+  color:white;
+  font-size: 1.7rem;
+}
+
+.main {
+  align-self: auto;
+  text-align: center;
+      text-shadow: 2px 2px 4px black;
+}
+.logo {
+  margin-top: 10em;
+  text-align: center;
+  background-color: transparent;
+}
+#opener {
+  color:white;
+  text-align: center;
+  font-size: 3em;
+}
+.secondary {
+  margin: 10 0 100 0;
+  color:white;
+  font-size: 1.7rem;
+}
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  text-align: center;
+  color:white;
+}
+
+button, input, select, textarea{
+    background-color: white;
+    color:black;
+}
+ #button{
+   color:black;
+   margin-top:2rem;
+ }
+
+input#y{
+  color:black;
+}
+
+input#q{
+  color:black;
+}
